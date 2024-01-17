@@ -27,7 +27,7 @@ else
 { fprintf(stderr, "L%d: usage: push integer\n", count);
 fclose(carry_t.file);
 free(carry_t.content);
-free_stack(*head);
+flush(*head);
 exit(EXIT_FAILURE); }
 n = atoi(carry_t.arg);
 if (carry_t.lifi == 0)
