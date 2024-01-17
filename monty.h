@@ -58,6 +58,7 @@ void print_stack(stack_t **stack_head, unsigned int unused_counter);
 void add_node_to_stack(stack_t **stack_head, int new_value);
 void flush(stack_t *stack_head);
 int execute(char *content, stack_t **stack, unsigned int counter, FILE *file);
+void do_nothing(stack_t **stack_head, unsigned int line_number);
 
 
 
