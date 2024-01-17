@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * f_push - add node to the stack
+ * push_node - add node to the stack
  * @head: stack head
  * @count: line_number
  * Return: no return
