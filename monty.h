@@ -1,9 +1,13 @@
-#ifndef HEADER_H
-#define HEADER_H
+#ifndef MONTY_H
+#define MONTY_H
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
 #include <stdio.h>
+#include <sys/types.h>
+#include <unistd.h>
+#include <fcntl.h>
+
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -38,5 +42,19 @@ typedef struct instruction_s
 } instruction_t;
 
 
+typedef struct carry
+{
+	char *arg;
+	FILE *file;
+	char *content;
+	int lifi;
+}  carry_t;
 
-#endif /* HEADER_H */
+
+void push_node(stack_t **head, unsigned int count);
+void creat_queue(stack_t **head, int n);
+void pint_node(stack_t **head, unsigned int counter);
+
+
+
+#endif /* MONTY_H */
