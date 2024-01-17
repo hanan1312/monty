@@ -12,7 +12,7 @@ if (*head == NULL)
 fprintf(stderr, "L%u: can't pint, stack empty\n", counter);
 fclose(carry_t.file);
 free(carry_t.content);
-free_stack(*head);
+flush(*head);
 exit(EXIT_FAILURE);
 }
 printf("%d\n", (*head)->n);

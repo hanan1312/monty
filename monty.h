@@ -48,8 +48,8 @@ typedef struct carry
 	FILE *file;
 	char *content;
 	int lifi;
-}  carry_t;
-
+}  carry_T;
+extern carry_T carry_t;
 
 void push_node(stack_t **head, unsigned int count);
 void creat_queue(stack_t **head, int n);

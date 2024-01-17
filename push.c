@@ -37,7 +37,7 @@ exit(EXIT_FAILURE);
 }
 n = atoi(carry_t.arg);
 if (carry_t.lifi == 0)
-addnode(head, n);
+add_node_to_stack(head, n);
 else
 creat_queue(head, n);
 }
