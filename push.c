@@ -21,7 +21,7 @@ if (flag == 1)
 { fprintf(stderr, "L%d: usage: push integer\n", count);
 fclose(carry_t.file);
 free(carry_t.content);
-free_stack(*head);
+flush(*head);
 exit(EXIT_FAILURE); }}
 else
 { fprintf(stderr, "L%d: usage: push integer\n", count);
