@@ -3,26 +3,26 @@
  * push_node - add node to the stack
  * @head: stack head
  * @count: line_number
- * Return: no return
+ * Return: no retstruct MyStruct carry_t;urn
 */
 void push_node(stack_t **head, unsigned int count)
 {
 int n, j = 0, flag = 0;
 
-if (carry_t.arg)
+if (carry.arg)
 {
-if (carry_t.arg[0] == '-')
+if (carry.arg[0] == '-')
 j++;
-for (; carry_t.arg[j] != '\0'; j++)
+for (; carry.arg[j] != '\0'; j++)
 {
-if (carry_t.arg[j] > 57 || carry_t.arg[j] < 48)
+if (carry.arg[j] > 57 || carry.arg[j] < 48)
 flag = 1;
 }
 if (flag == 1)
 {
 fprintf(stderr, "L%d: usage: push integer\n", count);
-fclose(carry_t.file);
-free(carry_t.content);
+fclose(carry.file);
+free(carry.content);
 flush(*head);
 exit(EXIT_FAILURE);
 }
@@ -30,13 +30,13 @@ exit(EXIT_FAILURE);
 else
 {
 fprintf(stderr, "L%d: usage: push integer\n", count);
-fclose(carry_t.file);
-free(carry_t.content);
+fclose(carry.file);
+free(carry.content);
 flush(*head);
 exit(EXIT_FAILURE);
 }
-n = atoi(carry_t.arg);
-if (carry_t.lifi == 0)
+n = atoi(carry.arg);
+if (carry.lifi == 0)
 add_node_to_stack(head, n);
 else
 creat_queue(head, n);

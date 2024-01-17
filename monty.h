@@ -42,14 +42,14 @@ typedef struct instruction_s
 } instruction_t;
 
 
-typedef struct carry
+typedef struct carry_s
 {
 	char *arg;
 	FILE *file;
 	char *content;
 	int lifi;
-}  carry_T;
-extern carry_T carry_t;
+}  carry_t;
+extern carry_t carry;
 
 void push_node(stack_t **head, unsigned int count);
 void creat_queue(stack_t **head, int n);
@@ -57,6 +57,7 @@ void pint_node(stack_t **head, unsigned int counter);
 void print_stack(stack_t **stack_head, unsigned int unused_counter);
 void add_node_to_stack(stack_t **stack_head, int new_value);
 void flush(stack_t *stack_head);
+int execute(char *content, stack_t **stack, unsigned int counter, FILE *file);
 
 
 
