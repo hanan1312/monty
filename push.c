@@ -16,19 +16,25 @@ j++;
 for (; carry_t.arg[j] != '\0'; j++)
 {
 if (carry_t.arg[j] > 57 || carry_t.arg[j] < 48)
-flag = 1; }
+flag = 1;
+}
 if (flag == 1)
-{ fprintf(stderr, "L%d: usage: push integer\n", count);
+{
+fprintf(stderr, "L%d: usage: push integer\n", count);
 fclose(carry_t.file);
 free(carry_t.content);
 flush(*head);
-exit(EXIT_FAILURE); }}
+exit(EXIT_FAILURE);
+}
+}
 else
-{ fprintf(stderr, "L%d: usage: push integer\n", count);
+{
+fprintf(stderr, "L%d: usage: push integer\n", count);
 fclose(carry_t.file);
 free(carry_t.content);
 flush(*head);
-exit(EXIT_FAILURE); }
+exit(EXIT_FAILURE);
+}
 n = atoi(carry_t.arg);
 if (carry_t.lifi == 0)
 addnode(head, n);
