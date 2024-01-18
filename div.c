@@ -33,9 +33,9 @@ void div_nodes(stack_t **stack_head, unsigned int line_number)
     if (current_node->n == 0)
     {
         fprintf(stderr, "L%d: division by zero\n", line_number);
-        fclose(bus.file);
-        free(bus.content);
-        free_stack(*stack_head);
+        fclose(carry.file);
+        free(carry.content);
+        flush(*stack_head);
         exit(EXIT_FAILURE);
     }
 
