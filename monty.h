@@ -63,6 +63,7 @@ void add_top_two_nodes(stack_t **stack_head, unsigned int line_number);
 void pop_node(stack_t **stack_head, unsigned int line_number);
 void swap_top_two_nodes(stack_t **stack_head, unsigned int line_number);
 void sub_nodes(stack_t **stack_head, unsigned int line_number);
+void f_stack(stack_t **head, unsigned int counter);
 void div_nodes(stack_t **stack_head, unsigned int line_number);
 void mul_nodes(stack_t **stack_head, unsigned int line_number);
 void mod_nodes(stack_t **stack_head, unsigned int line_number);
